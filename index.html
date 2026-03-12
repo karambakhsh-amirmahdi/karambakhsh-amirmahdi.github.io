@@ -44,8 +44,8 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(12px);
-      background: rgba(245, 247, 251, 0.75);
-      border-bottom: 1px solid rgba(231, 235, 242, 0.8);
+      background: rgba(245, 247, 251, 0.78);
+      border-bottom: 1px solid rgba(231, 235, 242, 0.85);
     }
 
     .nav-inner {
@@ -86,13 +86,13 @@
     }
 
     .hero-card {
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.92);
       box-shadow: var(--shadow);
       border-radius: 28px;
       padding: 42px;
       display: grid;
-      grid-template-columns: 1.4fr 0.8fr;
+      grid-template-columns: 1.45fr 0.85fr;
       gap: 32px;
       align-items: center;
     }
@@ -120,10 +120,6 @@
       color: var(--muted);
       margin-bottom: 24px;
       max-width: 720px;
-    }
-
-    .hero p {
-      margin-top: 0;
     }
 
     .cta-row {
@@ -179,19 +175,16 @@
       text-align: center;
     }
 
-    .avatar {
-      width: 128px;
-      height: 128px;
+    .profile-photo {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #b9cdfd, #dbe6ff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: #1d3f8f;
+      object-fit: cover;
+      object-position: center;
+      border: 6px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 8px 20px rgba(44, 77, 145, 0.16);
       margin-bottom: 18px;
-      box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.7);
+      background: #d9e4ff;
     }
 
     .profile-box h3 {
@@ -288,6 +281,22 @@
       margin-bottom: 8px;
     }
 
+    .project-title {
+      font-weight: 700;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .project-card {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-card:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
     .contact-links a {
       color: var(--accent);
       text-decoration: none;
@@ -344,6 +353,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -358,21 +368,21 @@
           <div class="eyebrow">Systems and Synthetic Biology</div>
           <h1>Amirmahdi Karambakhsh</h1>
           <p class="subtitle">
-            Master 2 student in Systems and Synthetic Biology at <strong>Université Évry Paris-Saclay.</strong>
+            Master 2 student in Systems and Synthetic Biology at <strong>Université Évry Paris-Saclay</strong>.
             Currently conducting an internship at <strong>Institut Curie</strong> in Paris, with interests spanning
             computational biology, bioinformatics, systems biology, image analysis, and experimental life sciences.
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-primary" href="#contact">Contact Me</a>
+            <a class="btn btn-primary" href="mailto:karambakhsh.amir@gmail.com">Contact Me</a>
             <a class="btn btn-secondary" href="https://github.com/karambakhsh-amirmahdi" target="_blank">GitHub</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-            <a class="btn btn-secondary" href="#">CV</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/karambakhsha" target="_blank">LinkedIn</a>
+            <a class="btn btn-secondary" href="Karambakhsh_CV.pdf" target="_blank">CV</a>
           </div>
         </div>
 
         <div class="profile-box">
-          <div class="avatar">AK</div>
+          <img src="image.png" alt="Portrait of Amirmahdi Karambakhsh" class="profile-photo">
           <h3>Research Profile</h3>
           <p>
             Bioinformatics, systems biology, machine learning, quantitative biology, and experimental approaches in the life sciences.
@@ -390,12 +400,12 @@
           <h3>About Me</h3>
           <p>
             I am a biology-trained researcher with strong interests in both computational and experimental life sciences.
-            My work brings together systems biology, bioinformatics, and quantitative analysis, while also reflecting my
-            enthusiasm for hands-on laboratory research and interdisciplinary scientific questions.
+            My work brings together systems biology, bioinformatics, and quantitative analysis, while also reflecting my enthusiasm
+            for hands-on laboratory research and interdisciplinary scientific questions.
           </p>
           <p>
-            I am particularly interested in developing a research path that connects molecular and cellular biology with
-            computational methods, with long-term goals in advanced academic research.
+            I am particularly interested in developing a research path that connects molecular and cellular biology with computational
+            methods, with long-term goals in advanced academic research.
           </p>
         </div>
 
@@ -440,6 +450,33 @@
       </div>
     </section>
 
+    <section class="section" id="projects">
+      <div class="card">
+        <h2 class="section-title">Selected Projects</h2>
+
+        <div class="project-card">
+          <div class="project-title">DNA Methylation Pattern Recognition in TNBC</div>
+          <p>
+            Undergraduate research project focused on identifying DNA methylation patterns in triple-negative breast cancer using machine learning approaches.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">Cell Migration and Image Analysis at Institut Curie</div>
+          <p>
+            Current internship project involving quantitative and experimental approaches in cell biology, including image analysis and computational workflows.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">Bioinformatics and Systems Biology Projects</div>
+          <p>
+            Experience with computational analysis, biological datasets, Cytoscape-based workflows, and interdisciplinary quantitative biology projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="education">
       <div class="grid">
         <div class="card">
@@ -447,7 +484,7 @@
 
           <div class="timeline-item">
             <div class="timeline-role">Master 2 in Systems and Synthetic Biology</div>
-            <div class="timeline-meta">Université Évry Paris-Saclay.</div>
+            <div class="timeline-meta">Université Évry Paris-Saclay</div>
             <div>Advanced training in systems biology, synthetic biology, quantitative and interdisciplinary life sciences.</div>
           </div>
 
@@ -498,10 +535,11 @@
       <div class="card">
         <h2 class="section-title">Contact</h2>
         <p class="contact-links">
-          Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+          Personal email: <a href="mailto:karambakhsh.amir@gmail.com">karambakhsh.amir@gmail.com</a><br>
+          Academic email: <a href="mailto:amirmahdi.karambakhsh@curie.fr">amirmahdi.karambakhsh@curie.fr</a><br>
           GitHub: <a href="https://github.com/karambakhsh-amirmahdi" target="_blank">github.com/karambakhsh-amirmahdi</a><br>
-          LinkedIn: <a href="https://www.linkedin.com/" target="_blank">Add your LinkedIn profile here</a><br>
-          CV: <a href="#">Add your CV link here</a>
+          LinkedIn: <a href="https://www.linkedin.com/in/karambakhsha" target="_blank">linkedin.com/in/karambakhsha</a><br>
+          CV: <a href="Karambakhsh_CV.pdf" target="_blank">Download CV</a>
         </p>
       </div>
     </section>
